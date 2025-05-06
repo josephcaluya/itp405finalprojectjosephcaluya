@@ -6,7 +6,7 @@
 
 @section('main')
     <h1>Edit Cafe: {{ $cafe->name }}</h1>
-    <form action="{{ route('cafe.update', [id = $cafe->id]) }}" method="POST">
+    <form action="{{ route('cafe.update', ['id' => $cafe->id]) }}" method="POST">
         @csrf
         @method('PATCH')
         <div class="py-3">
@@ -25,7 +25,7 @@
         </div>
         <div class="py-3">
             <label for="image" class="form-label">Image URL</label>
-            <input type="image" name="image" id="image" class="form-control" value="{{ old('image', $cafe->image) }}">
+            <input type="text" name="image" id="image" class="form-control" value="{{ old('image', $cafe->image) }}">
             @error('image')
                 <small class="text-danger">{{ $message }}</small>
             @enderror

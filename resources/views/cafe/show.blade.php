@@ -49,5 +49,18 @@
         @endforeach
         <div><form action="{{ route('comment.create', ['cafe_id' => $cafe->id]) }}"><button type="submit">Add a comment</button></form></div>
     </div>
+    <div class="py-3"><form action="{{ route('cafe.edit', ['id' => $cafe->id]) }}">
+        @csrf
+        <button type="submit" class="btn btn-warning">
+            Edit Cafe
+        </button>
+    </form></div>
+    <div class="py-3"><form action="{{ route('cafe.delete', ['id' => $cafe->id]) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger">
+            Delete Cafe
+        </button>
+    </form></div>
 
 @endsection

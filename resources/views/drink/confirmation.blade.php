@@ -19,5 +19,5 @@
         <form action="{{ route('drink.delete', ['id' => $id]) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="button">Delete Drink</button></div>
+            <button type="submit">Delete Drink</button></div>
 @endsection

@@ -12,7 +12,7 @@
         <div class="py-3">
             <label for="stars" class="form-label">How many stars would you rate your experience (1-5)?</label>
             <select name="stars" id="stars" class="form-select">
-                <option value="">-- Select Number of Stars --</option>
+                <option value="{{ $review->stars }}">{{ $review->stars }}</option>
                 <option value="1" {{ 1 === old('stars', $review->stars) ? "selected" : "" }}>1</option>
                 <option value="2" {{ 2 === old('stars', $review->stars) ? "selected" : "" }}>2</option>
                 <option value="3" {{ 3 === old('stars', $review->stars) ? "selected" : "" }}>3</option>

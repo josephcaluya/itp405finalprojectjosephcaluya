@@ -8,7 +8,7 @@
             {{ session('success') }}
         </div>
     @endif
-    <h1 class="py-3">List of Cafes</h1>
+    <h1 class="py-5">List of Cafes</h1>
     @if ($cafeCount === 0)
         <div><h3>No cafes have been added yet! Add one by clicking on the button below.</h3></div>
         <div class="pt-3"><form action="{{ route('cafe.create') }}" method="get"><button type="submit">Add a cafe here!</button></form></div>

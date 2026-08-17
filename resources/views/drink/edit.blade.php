@@ -5,7 +5,7 @@
 @endsection
 
 @section('main')
-    <h1>Edit Drink: {{ $drink->name }}</h1>
+    <h1 class="py-5">Edit Drink: {{ $drink->name }}</h1>
     <form action="{{ route('drink.update', ['id' => $drink->id]) }}" method="POST">
         @csrf
         @method('PATCH')
@@ -47,9 +47,11 @@
                 <small class="text-danger">{{ $message }}</small>
             @enderror
         </div>
-        <button type="submit" class="btn btn-primary">
-            Save Drink
-        </button>
+        <div class="py-3 text-center">
+            <button type="submit" class="btn btn-primary">
+                Save Drink
+            </button>
+        </div>
     </form>
     <form action="{{ route('drink.delete', ['id' => $drink->id]) }}" class="text-center" method="POST">
         @csrf

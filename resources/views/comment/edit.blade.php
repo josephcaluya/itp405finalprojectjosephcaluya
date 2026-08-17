@@ -5,7 +5,7 @@
 @endsection
 
 @section('main')
-    <h1>Edit Comment for {{ $comment->cafe->name }}</h1>
+    <h1 class="py-5">Edit Comment for {{ $comment->cafe->name }}</h1>
     <form action="{{ route('comment.update', ['id' => $comment->id]) }}" method="POST">
         @csrf
         @method('PATCH')

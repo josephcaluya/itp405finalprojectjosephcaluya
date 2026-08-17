@@ -3,7 +3,7 @@
 @section('title', 'Add Cafe')
 
 @section('main')
-    <h1>Add Cafe</h1>
+    <h1 class="py-5">Add Cafe</h1>
     <form action="{{ route('cafe.store') }}" method="POST">
         @csrf
         <div class="py-3">

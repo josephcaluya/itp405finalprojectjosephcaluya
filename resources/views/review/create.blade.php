@@ -3,7 +3,7 @@
 @section('title', 'Add Review')
 
 @section('main')
-    <h1>Add Review for {{ $cafe->name }}</h1>
+    <h1 class="py-5">Add Review for {{ $cafe->name }}</h1>
     <form action="{{ route('review.store', ['cafe_id' => $cafe->id]) }}" method="POST">
         @csrf
         <div class="py-3">

@@ -5,7 +5,7 @@
 @endsection
 
 @section('main')
-    <h1>Edit Cafe: {{ $cafe->name }}</h1>
+    <h1 class="py-5">Edit Cafe: {{ $cafe->name }}</h1>
     <form action="{{ route('cafe.update', ['id' => $cafe->id]) }}" method="POST">
         @csrf
         @method('PATCH')

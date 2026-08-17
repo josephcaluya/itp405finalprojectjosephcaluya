@@ -8,7 +8,7 @@
             {{ session('success') }}
         </div>
     @endif
-    <h1 class="py-3">Favorite Cafes</h1>
+    <h1 class="py-5">Favorite Cafes</h1>
     @if ($favoriteCount === 0)
         <div class="pb-3"><h3>No cafes have been favorited yet! Add one by going to a cafe's page.</h3></div>
         <div>

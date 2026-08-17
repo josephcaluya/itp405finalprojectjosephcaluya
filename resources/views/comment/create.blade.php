@@ -3,7 +3,7 @@
 @section('title', 'Add Comment')
 
 @section('main')
-    <h1>Add Comment for {{ $cafe->name }}</h1>
+    <h1 class="py-5">Add Comment for {{ $cafe->name }}</h1>
     <form action="{{ route('comment.store', ['cafe_id' => $cafe->id]) }}" method="POST">
         @csrf
         <div class="py-3">

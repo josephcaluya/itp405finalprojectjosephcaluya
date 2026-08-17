@@ -10,6 +10,9 @@
     @endif
     <div class="py-5">
         <h1 class="text-center">The Cafe Log | Home</h1>
+        <div class="py-5 text-center">
+            <img src="{{  asset('cafe.gif') }}" alt="Cafe animation">
+        </div>
         @if (Auth::check())
             <div class="py-3 d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-outline-dark" type="button"><a href="{{ route('cafe.create') }}" class="link-secondary">Add Cafe</a></button>

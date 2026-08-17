@@ -8,10 +8,10 @@
             {{ session('success') }}
         </div>
     @endif
-    <h1 class="py-3">Profile</h1>
-    <h4>Hello, {{ $user->name }}!</h4>
-    <h6>You like {{ $favoriteCount }} cafes. </h6>
-    <h6>Your reviews:</h6>
+    <h1 class="py-5">Profile</h1>
+    <h4 class="py-3">Hello, {{ $user->name }}!</h4>
+    <h6 class="py-3">You like {{ $favoriteCount }} cafes. </h6>
+    <h6 class="pt-3">Your reviews:</h6>
     @if ($reviewCount === 0)
         <p>You have no reviews yet! Visit a cafe page to add a review.</p>
         <div class="pb-3"><form action="{{ route('cafe.index') }}" method="get"><button type="submit">Go to Cafe List Page</button></form></div>

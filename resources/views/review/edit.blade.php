@@ -5,7 +5,7 @@
 @endsection
 
 @section('main')
-    <h1>Edit Review for {{ $review->cafe->name }}</h1>
+    <h1 class="py-5">Edit Review for {{ $review->cafe->name }}</h1>
     <form action="{{ route('review.update', ['id' => $review->id]) }}" method="POST">
         @csrf
         @method('PATCH')

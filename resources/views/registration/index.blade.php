@@ -3,7 +3,7 @@
 @section('title', 'Register')
 
 @section('main')
-  <h1 class="py-3">Register</h1>
+  <h1 class="py-5">Register</h1>
 
   <form method="post" action="{{ route('registration.create') }}">
     @csrf
@@ -21,7 +21,7 @@
         <small class="text-danger">{{ $message }}</small>
       @enderror
     </div>
-    <div class="mb-3">
+    <div class="mb-5">
       <label class="form-label" for="password">Password</label>
       <input type="password" id="password" name="password" class="form-control">
       @error('password')
